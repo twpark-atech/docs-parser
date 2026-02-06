@@ -1,0 +1,38 @@
+sub_title[[120, 112, 245, 133]]
+3) 양모직물 
+
+sub_title[[120, 137, 250, 157]]
+① 방축가공 
+
+text[[120, 157, 250, 177]]
+- Scale 제거 
+
+text[[379, 177, 845, 198]]
+산화제로서 DCCA(dichloroisocyanuric acid) 사용 
+
+image[[140, 183, 364, 365]]
+ 
+
+text[[120, 365, 375, 375]]
+Scanning electron micrograph of a clean merino wool fibre 
+
+image[[437, 203, 850, 365]]
+ 
+
+text[[120, 383, 647, 404]]
+② Setting : steaming에 의한 thio-disulfide 교환반응 
+
+image[[270, 409, 728, 540]]
+ 
+
+sub_title[[120, 556, 274, 576]]
+1.1 수지가공제 
+
+text[[120, 583, 875, 741]]
+수지가공제는 섬유 내부에서 축합되어 축합물을 섬유 내부에 형성하는 방식과 가교제를 사용하여 섬유분자를 가교하는 방식으로 나눌 수 있다. 축합형 수지가공제는 요소 혹은 멜라민에서 유도되는 수지를 사용하여 섬유에 처리하고 이렇게 처리된 가공제가 섬유내부에 축합물을 형성하여 가교 고분자를 형성하여 구성을 방지하는 가공 방법이다. 또한 가교형 수지는 셀룰로오스 섬유의 극성기인 hydroxy기와 가교역할로 반응하여 섬유분자를 움직이기 못하게 하는 방법이다. 아민기에 포름알데히드를 반응시켜 만든 N-메틸을 화합물이 가장 대표적이다. 이들의 예를 다음 표 2 및 표 3에 나타내었다. 
+
+table_caption[[120, 752, 370, 772]]
+표 2. 축합형 수지 가공제 
+
+table[[132, 776, 860, 886]]
+<table>화학명칭화학구조Dimethyl urea (DMU)NHCH2OH<br/>O=C<br/>NHCH2OHMethlated trimethyl melamine (MTMM)NHCH2OCH3<br/>N<br/>N<br/>H3COH2CHN<br/>N<br/>NHCH2OCH3</table>

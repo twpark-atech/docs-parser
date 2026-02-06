@@ -1,0 +1,5 @@
+표 3. 가교형수지 가공제 
+
+화학명칭화학구조Dimethyl ethylene urea (DMEU)OCHOH₂C-N-N-CH₂OHDimethyl alkyl triazone (DMTr)OHOH₂C-N-N-CH₂OHNRMethylated dimethylol uron (DMUr)OH₃COH₂C-N-N-CH₂OCH₃OHexamethyIol melamine (HMM)HOH₂C-N-CH₂OHNHOH₂C-N-N-CH₂OHCH₂OH CH₂OHDimethylol propylene urea (DMPU)OHOH₂C-N-N-CH₂OHDimethylol dihydroxy ethylene urea (DMDHEU)OHOH₂C-N-N-CH₂OHHOOHTetramethylol acetylene diurea (TMADU)HOH₂C H CH₂OHN-C-NO=CN-C-NHOH₂C H CH₂OHDimethylol alkyl carbamateO CH₂OHR-O-C-NCH₂OH
+
+위의 표에서와 같이 형태안정을 위해서 사용되는 가공제는 크게 디메틸요소 수지 가공제, 멜라민수지 가공제 및 고리형요소수지 가공제로 구별할 수 있다. 디메틸요소수지 가공제는 DMU수지가 대표적인 예로써 요소와 포름알데히드 를 반응시켜 아미노기에 메틸롤기가 1개 혹은 2개가 도입된 요소 수지를 제조 한다. 디메틸롤요소수지 가공제는 반응성이 커서 안정성이 좋지 않기 때문에 알코올기를 알킬화해서 사용한다. 멜라민수지 가공제는 멜라민과 3당량의 포름알데히드를 반응시켜 제조된 화합물로 반응성이 크다. 그리고 고리형요소수

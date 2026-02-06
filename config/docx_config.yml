@@ -1,0 +1,4 @@
+paths:
+  data_folder: "/mnt/d/스마트제조혁신기술개발/postprocess-data"
+  input_docx: "기능성 가공 기술 실무 테스트.docx"
+  output_dir: results
