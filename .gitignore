@@ -1,29 +1,38 @@
-nano .gitignore
-# 또는
-cat > .gitignore << 'EOF'
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.so
-*.egg-info/
-dist/
-build/
+.python-version
 .venv/
 venv/
 
-# IDE
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+
+# Env / local config
+.env
+.env.*
+*.local
+
+# IDE / OS
 .vscode/
 .idea/
-
-# OS
 .DS_Store
 Thumbs.db
 
 # Logs
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Local env
-.env
-EOF
+# Project runtime outputs
+scratch/
+results/
+tmp/

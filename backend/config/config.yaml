@@ -1,0 +1,159 @@
+# ==============================================================================
+# 목적 : Configuration 파일
+# 최초 작업자 : (AI솔루션/박태원)
+# 최초 작업일 : 2026-01-15
+# AI 활용 여부 :
+# ==============================================================================
+
+paths:
+  data_folder: "/mnt/d/스마트제조혁신기술개발/postprocess-data"
+  input_pdf: "기능성 가공 기술 실무 테스트.pdf"
+  input_docx: "기능성 가공 기술 실무 테스트.docx"
+  output_dir: "scratch"
+
+render:
+  scale: 3.0
+
+cache:
+  use_md_cache: True
+
+vlm:
+  active_model: "deepseek-ocr"
+  models:
+    deepseek-ocr:
+      url: "http://211.184.184.238:8004/v1"
+      model: "deepseek-ocr"
+      api_key: ""
+      timeout_sec: 3600
+    qwen3-vl-32b-instruct-awq:
+      url: "http://112.163.62.170:8012/v1"
+      model: "Qwen3-VL-32B-Instruct-AWQ"
+      api_key: "3c035ed9e73c0453a0b0dabe54823ca095857f77a87dfea5b5f50013f18320d9"
+      timeout_sec: 3600
+  url: "http://211.184.184.238:8004/v1"
+  model: "deepseek-ocr"
+  api_key: ""
+  timeout_sec: 3600
+
+prompt_ocr: |
+  <image>
+  <|grounding|>Convert the document to markdown.
+
+generation:
+  max_tokens: 2048
+  temperature: 0.0
+
+image_desc:
+  enabled: True
+  max_tokens: 512
+  temperature: 0.0
+
+prompt_img_desc: |
+  <image>
+  Describe this image in detail.
+  
+opensearch:
+  url: "http://localhost:9200"
+  text_index: "chunks"
+  image_index: "images"
+  table_index: "tables"
+  images_staging_index: "images_staging"
+  pages_staging_index: "pages_staging"
+  tables_staging_index: "tables_staging"
+  bulk_size: 500
+  # username: "admin"
+  # password: "Atech1221!@"
+  # verify_certs: false
+
+embed_text:
+  expected_dim: 4096
+  max_batch_size: 8
+  model: "Qwen/Qwen3-Embedding-8B"
+  timeout_sec: 120
+  truncate: True
+  base_url: "http://127.0.0.1:8008/v1"
+
+embed_image:
+  expected_dim: 1024
+  dimension: 1024
+  max_images_per_requests: 16
+  retry_once: True
+  model: null
+  timeout_sec: 60
+  batch_size: 16
+  throtthle_sec: 0.02
+  base_url: "http://211.184.184.238:8008/embed"
+
+llm:
+  models:
+    gpt-oss-20b:
+      url: "http://211.184.184.238:8004/v1"
+      model: "gpt-oss-20b"
+      api_key: ""
+    Qwen3-VL-32B-Instruct-AWQ:
+      url: "http://112.163.62.170:8012/v1"
+      model: "Qwen3-VL-32B-Instruct-AWQ"
+      api_key: "3c035ed9e73c0453a0b0dabe54823ca095857f77a87dfea5b5f50013f18320d9"
+  url: "http://211.184.184.238:8004/v1"
+  model: "gpt-oss-20b"
+  api_key: ""
+  timeout_sec: 120
+  max_tokens: 2048
+  temperature: 0.0
+  prompt: |
+    아래 테이블 텍스트를 HTML 표로 변환해줘.
+    요구사항:
+    1. 출력은 반드시 하나의 <table>...</table>만 반환한다.
+    2. 표 내부는 <tr>, <td> 태그만 사용한다.
+    3. HTML 속성(class, style, border 등)은 절대 넣지 않는다.
+    4. 여러 컬럼이 붙어 있는 경우 문맥상 합리적으로 분리한다.
+    5. 텍스트에 없는 값을 추정해서 추가하지 않는다.
+    6. 설명/근거/코드블록 없이 HTML만 출력한다.
+    입력:
+    {table}
+
+qdrant:
+  url: "http://localhost:6333"
+  collection: "pdf_chunks_v1_vec"
+  distance: "COSINE"
+
+neo4j:
+  enabled: True
+  uri: "bolt://localhost:7687"
+  username: "neo4j"
+  password: "12341234"
+  database: "neo4j"
+
+postgres:
+  enabled: true
+  dsn: "postgresql://postgres:postgres@localhost:5432/postgres"
+  connect_timeout_sec: 10
+
+minio:
+  endpoint: "localhost:9000"
+  access_key: "minio"
+  secret_key: "miniostorage"
+  bucket: "raw-documents"
+  secure: False
+
+ingest:
+  batch_size_opensearch: 500
+  batch_size_qdrant: 256
+  pipeline_version: null
+  config_hash: null
+
+chunking:
+  max_chunk_chars: 1200
+  min_chunk_chars: 80
+  join_target_chars: 900
+
+image_crop:
+  pad_ratio: 0.02
+
+debug:
+  draw_bboxes: False
+
+image_filter:
+  enabled: true
+  stddev_min: 2.0
+  mode: "grayscale"
